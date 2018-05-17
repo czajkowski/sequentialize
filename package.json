@@ -1,8 +1,13 @@
 {
   "name": "@czajkowski/sequentialize",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Make sure asynchronous functions are called one after another.",
+  "keywords": [
+    "sequence",
+    "promise",
+    "synchronize"
+  ],
+  "main": "src/index.js",
   "scripts": {
     "lint": "eslint ./src",
     "test": "jest ./src"

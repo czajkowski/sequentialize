@@ -1,15 +1,27 @@
-const createCallSequence = () => {
-    return (fn, ...params) => {
-        let result;
+const createCallSequence = (boundFn) => {
+    let previousCall = Promise.resolve();
 
-        if (typeof fn === "function") {
-            result = fn(...params);
-        } else {
-            result = fn;
-        }
+    const isFunction = fn => typeof fn === "function";
 
-        return Promise.resolve(result);
+    const sequenceFunction = (fn, ...params) => {
+        const currentCall = previousCall.then(() => {
+            let result;
+
+            if (isFunction(fn)) {
+                result = fn(...params);
+            } else {
+                result = fn;
+            }
+
+            return Promise.resolve(result);
+        });
+
+        previousCall = currentCall.catch(() => {});
+
+        return currentCall;
     };
+
+    return isFunction(boundFn) ? sequenceFunction.bind(null, boundFn) : sequenceFunction;
 };
 
 module.exports = createCallSequence;
