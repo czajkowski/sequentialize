@@ -1,5 +1,5 @@
 {
-  "name": "@czajkowski/sequentialize",
+  "name": "sequentialize",
   "version": "1.0.0",
   "description": "Make sure asynchronous functions are called one after another.",
   "keywords": [
