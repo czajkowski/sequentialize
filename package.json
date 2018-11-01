@@ -25,5 +25,18 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "jest": "^22.4.3"
+  },
+  "jest": {
+    "verbose": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 85,
+        "lines": 85,
+        "statements": 85
+      }
+    },
+    "collectCoverage": true,
+    "testURL": "http://localhost"
   }
 }
