@@ -1,4 +1,4 @@
-# Sequentialize
+# Sequentialize &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/czajkowski/sequentialize/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/sequentialize.svg?style=flat)](https://www.npmjs.com/package/sequentialize)
 
 Make sure asynchronous functions are called one after another.
 
