@@ -7,7 +7,7 @@ Make sure asynchronous functions are called one after another.
 ### Call sequence
 
 ```javascript
-const createCallSequence = require("@czajkowski/sequentialize");
+const createCallSequence = require("sequentialize");
 
 const callSequence = createCallSequence();
 
@@ -21,7 +21,7 @@ callSequence(asyncFunction, 2, 10).then(console.log);
 ### Bound call sequence
 
 ```javascript
-const createCallSequence = require("@czajkowski/sequentialize");
+const createCallSequence = require("sequentialize");
 
 const asyncFunction = (value, interval = 10) =>
     new Promise(resolve => setTimeout(() => resolve(value), interval));
