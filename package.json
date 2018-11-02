@@ -1,6 +1,6 @@
 {
   "name": "sequentialize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make sure asynchronous functions are called one after another.",
   "keywords": [
     "sequence",
